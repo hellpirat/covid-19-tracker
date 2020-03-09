@@ -1,6 +1,5 @@
 <script>
   import { onMount } from 'svelte'
-  import { Progress } from 'svelma'
 
   import Total from '../modules/app/Total.svelte'
   import Table from '../modules/app/Table.svelte'
@@ -12,27 +11,26 @@
 
   import 'bulma/css/bulma.css'
 
+  let page = 1
+
   let responseData = null
   let loading = true
   let data
   let lastUpdate
 
   onMount(async () => {
-    responseData = await request('summary/')
+    responseData = await request('summary/?limit=500')
     loading = false
   })
-
-  console.log(responseData)
-
   $: data = responseData && responseData.results && responseData.results[0]
-  $: console.log(data)
   $: lastUpdate = formatDate(data && data.created)
 </script>
 
-<Layout {lastUpdate}>
-  {#if loading && !data}
-    <Loader title="PageLoader" />
-  {:else}
+{#if loading && !data}
+  <Loader title="PageLoader" />
+{:else}
+  <Layout {lastUpdate}>
+
     <h1 class="title has-text-centered">COVID-19 cases</h1>
     <Total
       confirmedCount="{data.confirmed}"
@@ -40,12 +38,14 @@
       deathsCount="{data.deaths}"
     />
 
-    <Progress
-      type="is-success"
+    <progress
+      class="progress is-success"
+      max="111354"
       value="{data.recovered}"
-      max="{data.confirmed}"
-    />
-    <Table countriesData="{data.countries_data}" />
-  {/if}
+    ></progress>
 
-</Layout>
+    <div>
+      <Table countriesData="{data.countries_data}" />
+    </div>
+  </Layout>
+{/if}

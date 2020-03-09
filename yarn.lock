@@ -263,11 +263,6 @@ builtin-modules@^3.1.0:
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-3.1.0.tgz#aad97c15131eb76b65b50ef208e7584cd76a7484"
   integrity sha512-k0KL0aWZuBt2lrxrcASWDfwOLMnodeQjodT/1SxEQAXsHANgo6ZC/VEaSEHCXt7aSTZ4/4H5LKa+tBXmW7Vtvw==
 
-bulma-pageloader@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/bulma-pageloader/-/bulma-pageloader-0.3.0.tgz#94a4ff7d9129cbe01dbc5cae4e64508e13563cf1"
-  integrity sha512-lbahiqhBCov5AYdziHFnC5/JOhCrJWFTpdRiAkwW49IM/mf0whCWHVe8MuejZFu2PEs1mtH8Gnz8exEks4Q+7g==
-
 bulma@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.8.0.tgz#ac1606431703a4761b18a4a2d5cc1fa864a2aece"
@@ -2443,11 +2438,6 @@ supports-color@^6.1.0:
   integrity sha512-qe1jfm1Mg7Nq/NSh6XE24gPXROEVsWHxC1LIx//XNlD9iw7YZQGjZNjYN7xGaEG6iKdA8EtNFW6R0gjnVXp+wQ==
   dependencies:
     has-flag "^3.0.0"
-
-svelma@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/svelma/-/svelma-0.3.2.tgz#ef90d4f8ed3f6424a2415ff397593fd9069d72d3"
-  integrity sha512-PWs4yAr2+NWnFqfUgQF+du+1oZr7mgcxv/4Le6dZwOneskabEQ3rAbRIOo0n5r2R65L3JbzV64vzfoADlylt5Q==
 
 svelte-preprocess@^3.4.0:
   version "3.4.0"
