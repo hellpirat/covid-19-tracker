@@ -1,17 +1,25 @@
 <script>
   import { getPercentage } from '../../lib/percentage'
   import { formatNumber } from '../../lib/format-number'
+
   export let countriesData
 </script>
 
-<div class="table-container">
+<style>
+  .sticky {
+    position: sticky;
+    top: 0;
+    background: #fff;
+  }
+</style>
+
   <table class="table is-striped is-hoverable is-fullwidth">
     <thead>
       <tr>
-        <th scope="col">Country</th>
-        <th scope="col">Confirmed</th>
-        <th scope="col">Recovered</th>
-        <th scope="col">Deaths</th>
+        <th class="sticky" scope="col">Country</th>
+        <th class="sticky" scope="col">Confirmed</th>
+        <th class="sticky" scope="col">Recovered</th>
+        <th class="sticky" scope="col">Deaths</th>
       </tr>
     </thead>
     <tbody>
@@ -30,4 +38,3 @@
       {/each}
     </tbody>
   </table>
-</div>
