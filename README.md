@@ -1,5 +1,8 @@
 
 Based on https://github.com/amureki/covidapp
+
+---
+
 Backend API: [https://covidapp.herokuapp.com/swagger/](https://covidapp.herokuapp.com/swagger/)
 
 ---
