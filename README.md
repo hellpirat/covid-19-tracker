@@ -1,4 +1,6 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+
+Based on https://github.com/amureki/covidapp
+Backend API: [https://covidapp.herokuapp.com/swagger/](https://covidapp.herokuapp.com/swagger/)
 
 ---
 
