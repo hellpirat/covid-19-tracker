@@ -6,7 +6,7 @@
   import Layout from '../modules/layout/BaseLayout.svelte'
   import Loader from '../ui/Loader.svelte'
 
-  import { request } from '../lib/request'
+  import * as api from '../api'
   import { formatDate } from '../lib/format-date'
 
   import 'bulma/css/bulma.css'
@@ -19,11 +19,13 @@
   let lastUpdate
 
   onMount(async () => {
-    responseData = await request('summary/?limit=500')
+    data = await api.getLatest()
     loading = false
   })
-  $: data = responseData && responseData.results && responseData.results[0]
-  $: lastUpdate = formatDate(data && data.created)
+
+  $: if (data) {
+    lastUpdate = formatDate(data.created)
+  }
 </script>
 
 {#if loading && !data}
