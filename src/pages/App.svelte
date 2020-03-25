@@ -11,8 +11,6 @@
 
   import 'bulma/css/bulma.css'
 
-  let page = 1
-
   let responseData = null
   let loading = true
   let data
@@ -42,7 +40,7 @@
 
     <progress
       class="progress is-success"
-      max="111354"
+      max="{data.confirmed}"
       value="{data.recovered}"
     ></progress>
 
